@@ -1,0 +1,27 @@
+{
+  "name": "table",
+  "version": "1.0.0",
+  "description": "create table",
+  "main": "index.html",
+  "dependencies": {
+    "g": "^2.0.1",
+    "jsdoc": "^3.6.7"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "browser-sync start --server --files 'dist/css/*.css, **/*.html'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dyutkin/Dyutkin.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dyutkin/Dyutkin.github.io/issues"
+  },
+  "homepage": "https://github.com/Dyutkin/Dyutkin.github.io#readme"
+}
