@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+.flex {
+    display: flex;
+}
+
+.table {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(82, 78, 78);
+    height: 100%;
+    max-width: 1200px;
+}
+
+.noData {
+    height: 50vh;
+    display: flex;
+}
+
+.none {
+    display: none;
+
+}
+
+.noData h4 {
+    /* display:table-cell; 
+    vertical-align:middle;
+    text-align:center; */
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table__header {
+    width: 100%;
+    height: 100%;
+}
+
+.table__header.flex {
+    flex-direction: column
+}
+
+.table__header div {
+    width: 100%;
+    height: 100%;
+}
+
+.table__header h3 {
+    text-align: center;
+    padding: 5px 10px;
+    margin: 1% 0;
+    font-size: 2vh;
+}
+
+.table__header__elements.flex {
+    justify-content: center;
+}
+
+.table__header__elements input {
+    margin: 10px;
+    width: 39%;
+    height: 5vh;
+    font-size: 2vh;
+    outline: none;
+    /* border-radius: 10px; */
+    -webkit-box-shadow: 7px 6px 24px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 7px 6px 24px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 7px 6px 24px 0px rgba(34, 60, 80, 0.2);
+}
+
+.table__header__elements input:focus {
+    text-decoration: none;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+}
+
+.table__header__elements button {
+    margin: 10px;
+    height: 5vh;
+    width: 19%;
+    font-size: 1.6vh;
+    padding: auto;
+    -webkit-box-shadow: 7px 6px 24px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 7px 6px 24px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 7px 6px 24px 0px rgba(34, 60, 80, 0.2);
+    /* appearance: none; */
+    border: 0;
+    border-radius: 10px;
+    background: #74777c;
+    color: #fff;
+}
+
+.table__header__elements button:active {
+    top: .1em;
+    left: .1em;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+}
+
+.table__body {
+    width: 1200px;
+    overflow: scroll;
+}
+
+.table__body table {
+    text-align: "center";
+}
+
+.infotable {
+    border: 1px solid #eee;
+    table-layout: auto;
+    width: 100%;
+    min-width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    overflow: scroll;
+    font-size: 2vh;
+}
+
+.infotable th {
+    font-weight: bold;
+    padding: 5px;
+    min-width: 16.7%;
+    background: #efefef;
+    border: 1px solid #dddddd;
+}
+
+.infotable td {
+    padding: 5px 10px;
+    border: 1px solid #eee;
+    min-width: 16.7%;
+    text-align: left;
+}
+
+.infotable tbody tr:nth-child(odd) {
+    background: #fff;
+}
+
+.infotable tbody tr:nth-child(even) {
+    background: #F7F7F7;
+}
+
+td img {
+    display: block;
+    margin: 0 auto;
+}
+
+.tooltip {
+    position: absolute;
+    display: block;
+    z-index:999;
+    left:-9999px;
+    background-color:#dedede;
+    padding:5px;
+    border:1px solid #fff;
+    width: content;
+}
+
+
+/*  */
+.preloader {
+    /*фиксированное позиционирование*/
+    position: fixed;
+    /* координаты положения */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* фоновый цвет элемента */
+    background: #e0e0e0;
+    /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+    z-index: 1001;
+  }
+
+  .preloader__row {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+    animation: preloader-rotate 2s infinite linear;
+  }
+
+  .preloader__item {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    background-color: #337ab7;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    animation: preloader-bounce 2s infinite ease-in-out;
+  }
+
+  .preloader__item:last-child {
+    top: auto;
+    bottom: 0;
+    animation-delay: -1s;
+  }
+
+  @keyframes preloader-rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes preloader-bounce {
+
+    0%,
+    100% {
+      transform: scale(0);
+    }
+
+    50% {
+      transform: scale(1);
+    }
+  }
+
+  .loaded_hiding .preloader {
+    transition: 0.3s opacity;
+    opacity: 0;
+  }
+
+  .loaded .preloader {
+    display: none;
+  }

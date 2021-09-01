@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="table">
+        <div class="preloader">
+            <div class="preloader__row">
+              <div class="preloader__item"></div>
+              <div class="preloader__item"></div>
+            </div>
+          </div>
+        
+        <div class="table__header flex">
+            <div>
+                <h3>Таблица пользователей с фильтрацией по имени</h4>
+            </div>
+            <div class='table__header__elements flex'>
+                <input id='input' type="text" placeholder='Введите имя'>
+                <button id='drop'>Сбросить</button>
+            </div>
+        </div>
+        <div class="noData none"> <h4>Ничего не найдено</h4></div>
+        <div class="table__body">
+            <table class="table__body__infotable infotable">
+                <thead>
+                    <tr>
+                        <th>name</th>
+                        <th>picture</th>
+                        <th>location</th>
+                        <th>email</th>
+                        <th>phone</th>
+                        <th>registered date</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
