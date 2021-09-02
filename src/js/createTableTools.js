@@ -84,7 +84,6 @@ const createPhoneOrEmailTd = (content) => {
  * @returns {object} 
  */
 const createRegisteredDateTd = (registered) => {
-    console.log(registered)
     const newTd = document.createElement("td");
     newTd.textContent = new Date(registered.date).toJSON().slice(0, 10).split('-').reverse().join('.')
 
